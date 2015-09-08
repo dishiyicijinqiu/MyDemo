@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85643BBB-8D3F-418C-AABB-2694297511E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyDemo.Client</RootNamespace>
+    <AssemblyName>MyDemo.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\ButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ButtonStyle.Designer.cs">
+      <DependentUpon>ButtonStyle.cs</DependentUpon>
+    </Compile>
+    <Content Include="ReadMe.txt" />
+    <Compile Include="Components\DataGridView_InterlacedColor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DataGridView_InterlacedColor.Designer.cs">
+      <DependentUpon>DataGridView_InterlacedColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DataGridView_ShowLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DataGridView_ShowLine.Designer.cs">
+      <DependentUpon>DataGridView_ShowLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadTest2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadTest2.Designer.cs">
+      <DependentUpon>FormLoadTest2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadTest1.Designer.cs">
+      <DependentUpon>FormLoadTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLoginForm.Designer.cs">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FormLoadErrorExit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FormLoadErrorExit.Designer.cs">
+      <DependentUpon>FormLoadErrorExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="App.config" />
+    <None Include="Resources\cards_32x32.png" />
+    <None Include="Resources\cards_16x16.png" />
+    <None Include="Resources\close_32x32.png" />
+    <None Include="Resources\close_16x16.png" />
+    <None Include="Resources\save_32x32.png" />
+    <None Include="Resources\save_16x16.png" />
+    <None Include="Resources\paste_32x32.png" />
+    <None Include="Resources\paste_16x16.png" />
+    <None Include="Resources\edit_32x32.png" />
+    <None Include="Resources\edit_16x16.png" />
+    <None Include="Resources\delete_32x32.png" />
+    <None Include="Resources\delete_16x16.png" />
+    <None Include="Resources\cancel_32x32.png" />
+    <None Include="Resources\cancel_16x16.png" />
+    <None Include="Resources\apply_32x32.png" />
+    <None Include="Resources\apply_16x16.png" />
+    <None Include="Resources\add_16x16.png" />
+    <None Include="Resources\add_32x32.png" />
+    <EmbeddedResource Include="FormLoadTest2.resx">
+      <DependentUpon>FormLoadTest2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadTest1.resx">
+      <DependentUpon>FormLoadTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLoginForm.resx">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{b4b86c1f-74fe-44dc-bab9-efd5ae8557de}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{65ca9b4b-f273-4a75-b0e6-daa5795e5a06}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service.Interface\Service.Interface.csproj">
+      <Project>{9365a018-df5d-4c43-998d-f06875617fb0}</Project>
+      <Name>Service.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+﻿1.组合模式（多用组合少用继承）的应用
+ButtonStyle,DataGridView_ShowLine,DataGridView_InterlacedColor,FormLoadErrorExit
+按钮样式，DataGridView显示行号，DataGridView隔行变色，窗体载入失败后关闭
+2.WCF，winform模式下 实现Session
