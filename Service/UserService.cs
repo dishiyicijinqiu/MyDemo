@@ -4,6 +4,7 @@ using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Web.Security;
 
 namespace Service
@@ -51,6 +52,14 @@ namespace Service
         public string SayHello(string UserName)
         {
             return string.Format("Hello:{0},{1}", UserName, DateTime.Now.ToString("HH:mm:ss fff"));
+        }
+
+
+        public void Add(double x, double y)
+        {
+            double result = x + y;
+            ICallback callback = OperationContext.Current.GetCallbackChannel<ICallback>();
+            callback.DisplayResult(x, y, result);
         }
     }
 }

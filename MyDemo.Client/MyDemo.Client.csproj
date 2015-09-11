@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculateCallback.cs" />
     <Compile Include="Components\ButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -96,7 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\cards_32x32.png" />
     <None Include="Resources\cards_16x16.png" />
     <None Include="Resources\close_32x32.png" />
@@ -160,6 +163,9 @@
       <Project>{9365a018-df5d-4c43-998d-f06875617fb0}</Project>
       <Name>Service.Interface</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

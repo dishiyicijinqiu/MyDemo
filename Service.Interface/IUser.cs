@@ -7,7 +7,8 @@ using System.Text;
 
 namespace Service.Interface
 {
-    [ServiceContract]
+    //[ServiceContract]
+    [ServiceContract(CallbackContract = typeof(ICallback))]
     public interface IUser
     {
         [OperationContract]
@@ -17,5 +18,8 @@ namespace Service.Interface
         [Session]
         [OperationContract]
         string SayHello(string UserName);
+
+        [OperationContract(IsOneWay = true)]
+        void Add(double x, double y);
     }
 }

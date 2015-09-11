@@ -2,18 +2,23 @@
 using FengSharp.OneCardAccess.Common;
 using FengSharp.OneCardAccess.Insfrastructures.BusinessEntity;
 using MyDemo.Client.Properties;
-using System;
-using System.Windows.Forms;
 using Service.Interface;
+using System;
+using System.ServiceModel;
+using System.Windows.Forms;
 
 namespace MyDemo.Client
 {
     public partial class UserLoginForm : Form
     {
-        private IUser _Service = ServiceProxyFactory.Create<IUser>("UserService");
+
+        InstanceContext instanceContext;
+        private IUser _Service;
         public UserLoginForm()
         {
             InitializeComponent();
+            instanceContext = new InstanceContext(new CalculateCallback());
+            _Service = ServiceProxyFactory.CreateDuplex<IUser>(instanceContext, "UserService");
         }
 
         private void Form1_Load(object sender, EventArgs e)

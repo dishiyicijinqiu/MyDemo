@@ -52,6 +52,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "admin";
             // 
             // textBox2
             // 
@@ -60,6 +61,7 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(166, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "admin";
             // 
             // label2
             // 
@@ -82,6 +84,7 @@
             // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(185, 140);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);

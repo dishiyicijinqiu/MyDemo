@@ -9,15 +9,26 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Service.Interface;
+using System.ServiceModel;
 
 namespace MyDemo.Client
 {
     public partial class MainForm : Form
     {
-        private IUser _Service = ServiceProxyFactory.Create<IUser>("UserService");
+        InstanceContext instanceContext;
+        private IUser _Service;
         public MainForm()
         {
             InitializeComponent();
+            var callback = new CalculateCallback();
+            callback.Display += callback_Display;
+            instanceContext = new InstanceContext(callback);
+            _Service = ServiceProxyFactory.CreateDuplex<IUser>(instanceContext, "UserService");
+        }
+
+        void callback_Display(object sender, DisplayEventArgs e)
+        {
+            MessageBox.Show(string.Format("{0}+{1}={2}", e.X, e.Y, e.Result));
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -102,6 +113,28 @@ namespace MyDemo.Client
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.label5.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //InstanceContext instanceContext = new InstanceContext(new CalculateCallback());
+                //using (DuplexChannelFactory<IUser> channelFactory = new DuplexChannelFactory<IUser>(instanceContext, "UserService"))
+                //{
+                //    IUser proxy = channelFactory.CreateChannel();
+                //    using (proxy as IDisposable)
+                //    {
+                //        proxy.Add(1, 2);
+                //        Console.Read();
+                //    }
+                //}
+                _Service.Add(1, 2);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
     /// <summary>

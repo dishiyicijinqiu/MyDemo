@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button4);
@@ -74,6 +76,19 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "buttonstyle效果";
+            // 
+            // button8
+            // 
+            this.buttonStyle1.SetEnable(this.button8, false);
+            this.button8.Location = new System.Drawing.Point(534, 32);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.buttonStyle1.SetStyle(this.button8, MyDemo.Client.ButtonStyleKind.AddWithSmallImage);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "测试双工";
+            this.buttonStyle1.SetUseDefaultText(this.button8, true);
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label1
             // 
@@ -262,8 +277,8 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Beige;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView_InterlacedColor1.SetEnable(this.dataGridView1, true);
@@ -275,8 +290,8 @@
             this.dataGridView_InterlacedColor1.SetOddBackColor(this.dataGridView1, System.Drawing.Color.Bisque);
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 60;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Bisque;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Bisque;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Size = new System.Drawing.Size(679, 206);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -335,5 +350,6 @@
         private Components.DataGridView_InterlacedColor dataGridView_InterlacedColor1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button8;
     }
 }
