@@ -28,6 +28,9 @@ namespace WcfService1
         public UnityServiceHost(Type serviceType, Uri[] baseAddresses)
             : base(serviceType, baseAddresses)
         {
+            //NetTcpBinding
+            //WebHttpBinding
+            
         }
         protected override void OnOpening()
         {
