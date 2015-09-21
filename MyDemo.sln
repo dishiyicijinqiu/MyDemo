@@ -19,6 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService2", "WcfService2\WcfService2.csproj", "{EAD8D7F9-CA34-42C0-90F2-F1135B335878}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "命名管道", "命名管道", "{04877A1D-E8DF-4F54-B1E0-DA719EA4DA5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{C6A1B3B3-85BB-483D-B799-4CC7197A30DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication2", "WindowsFormsApplication2\WindowsFormsApplication2.csproj", "{EC839D75-CC37-4D36-ACFF-4C1E18A5B99A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,8 +63,20 @@ Global
 		{EAD8D7F9-CA34-42C0-90F2-F1135B335878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD8D7F9-CA34-42C0-90F2-F1135B335878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD8D7F9-CA34-42C0-90F2-F1135B335878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A1B3B3-85BB-483D-B799-4CC7197A30DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A1B3B3-85BB-483D-B799-4CC7197A30DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A1B3B3-85BB-483D-B799-4CC7197A30DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A1B3B3-85BB-483D-B799-4CC7197A30DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC839D75-CC37-4D36-ACFF-4C1E18A5B99A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC839D75-CC37-4D36-ACFF-4C1E18A5B99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC839D75-CC37-4D36-ACFF-4C1E18A5B99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC839D75-CC37-4D36-ACFF-4C1E18A5B99A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C6A1B3B3-85BB-483D-B799-4CC7197A30DE} = {04877A1D-E8DF-4F54-B1E0-DA719EA4DA5C}
+		{EC839D75-CC37-4D36-ACFF-4C1E18A5B99A} = {04877A1D-E8DF-4F54-B1E0-DA719EA4DA5C}
 	EndGlobalSection
 EndGlobal

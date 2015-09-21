@@ -33,3 +33,6 @@ NetPeerTcpBinding
 MsmqIntegrationBinding
 一个适合于WCF应用程序和现有消息队列应用程序之间的跨计算机通信的绑定。
 信道分发器（ChannelDispatcher），终结点分发器（EndpointDispatcher），消息分发器
+
+
+麦迪斯顿，踏浪者
