@@ -58,7 +58,6 @@ namespace SimpleCode.NamedPipeLib
             _pipName = pipName;
 
             _pipeClient = new NamedPipeClientStream(serverName, pipName, PipeDirection.InOut);
-
         }
 
         /// <summary>
